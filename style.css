@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --fuente-RedHatDisplay: "Red Hat Display", serif;
+    --color-primario: rgb(28, 2, 82);
+    --color-secundario: rgb(244, 238, 238);
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+
+body{
+    box-sizing: border-box;
+    background-color: white;
+    color: rgb(5, 19, 110);
+    background-image: linear-gradient(rgba(3, 3, 82, 0.5), rgba(7, 7, 101, 0.5)),url(assets/background.jpg); 
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.header{
+    padding: 4%;
+    text-align: center;
+}
+
+.header__menu__link {
+    margin: 70px;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: 600;
+    font-family: var(--fuente-RedHatDisplay);
+    text-align: center;
+    color:  var(--color-secundario);
+    border: 0.5px solid;
+    border-radius: 8px;
+    padding: 11px;
+    background-color: var(--color-primario);
+}
+
+.header__menu__link:hover{
+    background-color:rgba(3, 3, 82, 0.4)
+}
+
+.titulo-destaque {
+    color: rgb(43, 4, 88);
+    font-size: 120%;
+    font-weight: 600;
+    font-family: var(--fuente-RedHatDisplay);
+    padding: 5%;
+}   
+
+.presentacion {
+    margin: 10% 23%;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgb(244, 238, 238, 0.8);
+}
+
+.presentacion__img {
+    width: 50%; 
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 250%;
+    font-family: var(--fuente-RedHatDisplay);
+}
+
+.presentacion__contenido__texto{
+    font-size: 95%;
+    font-weight: 600;
+    font-family: var(--fuente-RedHatDisplay);
+    padding: 5%;
+}
+
+.presentacion__enlaces{
+    margin: 0% 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    padding: 1.5%;
+    gap: 150px;
+}
+
+.presentacion__enlaces__link{
+    display: inline-block; /* Ajusta el tamaño del enlace al contenido (imagen) */
+    padding: 0; /* Elimina el relleno extra */
+}
+
+.sobre__enlaces{
+    background-color: var(--color-secundario);
+    padding-bottom: 15%;
+}
+
+.boton {
+    width: 30px; /* Ajusta el tamaño según tu preferencia */
+    height: 30px;
+    display: block; /* Hace que la imagen ocupe todo el espacio del <a> */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.boton:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+    opacity: 0.8; /* Reduce la opacidad para un efecto visual sutil */
+}
+
+.footer {
+    background-color: var(--color-secundario);
+    margin-top: 30px;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    font-family: var(--fuente-RedHatDisplay);
+}
+
+
+@media screen and (max-width: 768px) {
+    .presentacion {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+        text-align: center;
+        width: auto;
+    }
+
+    .presentacion img {
+        width: 60%;
+
+    }
+
+    .presentacion__contenido {
+        width: auto;
+    }
+
+    .presentacion__enlaces {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; /* Reduce el espacio entre botones en pantallas pequeñas */
+        flex-wrap: wrap;
+        padding: 1%;
+    }
+
+    .presentacion__enlaces__link {
+        flex-wrap: wrap; /* Hace que los botones se acomoden en varias filas */
+        margin: 1px;
+        justify-content: center; /* Centra los botones */
+        padding: 0px;
+    }
+
+    .boton {
+        flex-wrap: wrap; /* Hace que los botones se acomoden en varias filas */
+        margin: 1px;
+        justify-content: center; /* Centra los botones */
+        padding: 0px;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: column; /* Apila los botones verticalmente */
+        align-items: center; /* Centra los botones */
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 0;
+        margin: 0;
+    }
+    
+    .header__menu__link {
+        width: 50%; /* Cada botón ocupa todo el ancho */
+        text-align: center;
+        padding: 10px; /* Ajusta el espacio interno */
+        font-size: 18px;
+        margin: 0; /* Elimina márgenes */
+    }
+
+    .sobre__enlaces {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+        text-align: center;
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .presentacion__enlaces {
+        gap: 10px; /* Espaciado aún menor para pantallas más pequeñas */
+    }
+}

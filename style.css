@@ -30,7 +30,7 @@ body{
 .header__menu__link {
     margin: 70px;
     text-decoration: none;
-    font-size: 100%;
+    font-size: 1rem;
     font-weight: 600;
     font-family: var(--fuente-RedHatDisplay);
     text-align: center;
@@ -47,7 +47,7 @@ body{
 
 .titulo-destaque {
     color: rgb(43, 4, 88);
-    font-size: 120%;
+    font-size: 1.2rem;
     font-weight: 600;
     font-family: var(--fuente-RedHatDisplay);
     padding: 5%;
@@ -84,12 +84,26 @@ body{
 }
 
 .presentacion__contenido__titulo{
-    font-size: 250%;
+    font-size: 2.5rem;
     font-family: var(--fuente-RedHatDisplay);
 }
 
+.presentacion__contenido__titulo2{
+    font-size: 2.5rem;
+    font-family: var(--fuente-RedHatDisplay);
+    margin-bottom: 25%;
+}
+
+.presentacion__contenido__texto2 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--fuente-RedHatDisplay);
+    padding: 5%;
+    margin-bottom: 20%;
+}
+
 .presentacion__contenido__texto{
-    font-size: 95%;
+    font-size: 1rem;
     font-weight: 600;
     font-family: var(--fuente-RedHatDisplay);
     padding: 5%;
@@ -153,6 +167,24 @@ body{
     .presentacion__contenido {
         width: auto;
     }
+
+    .presentacion__contenido__titulo {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+        text-align: center;
+        width: auto;
+        font-size: 2rem;
+    }
+
+    .presentacion__contenido__texto {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+        text-align: center;
+        width: auto;
+        font-size: 1rem;
+    }
+
+
+
+
 
     .presentacion__enlaces {
         display: flex;

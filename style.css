@@ -68,6 +68,14 @@ body{
     width: 50%; 
 }
 
+.imagen__visionboard{
+    width: 55%;
+}
+
+.imagen__curriculum{
+    width: 55%;
+}
+
 .presentacion__contenido{
     width: 50%;
     display: flex;
